@@ -1,0 +1,32 @@
+/*RESET*/
+*{
+    /*PARA QUE NO SUME EL PADING AL WIDTH*/
+
+    box-sizing: border-box;
+
+}
+
+
+/*VARIABLES*/
+
+:root{
+    --paddingGrid-S: 20px;
+    --paddingGrid-D: 40px;
+
+}
+
+/*CONTENEDOR*/
+
+.contendor{
+    padding: 0 var(--paddingGrid-S);
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    column-gap: var(--paddingGrid-S);
+
+    @media only screen and (min: width 1000px);{
+        padding: 0 var(--paddingGrid-D);
+        grid-template-columns: repeat(12,1fr);
+        column-gap: var(--paddingGrid-D);
+        
+    }
+}
