@@ -1,35 +1,170 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+    <head>
+        <!-- Etiquetas Meta -->
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width,          initial-scale=1.0" />
-        <title>Document</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="author" content="Tu nombre" />
 
-        <link rel="stylesheet" href="CSS/normalize.css" />
-        <link rel="stylesheet" href="CSS/estilos.css" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta name="robots" content="index, follow" />
+        <meta name="format-detection" content="telephone=no, email=no" />
 
-  </head>
+        <!-- Etiqueta para favicon -->
+        <link rel="icon" href="favicon.ico" type="image/x-icon" />
 
-  <body>
+        <!-- SEO para el buscador de Google -->
+        <title>Título de tu página</title>
+        <meta name="description" content="Descripción de tu página" />
 
-    <div class="contendor">
-        <header class="header">
+        <!-- Etiquetas Open Graph y Twitter Card, para crear el SEO de Redes Sociales -->
+        <meta property="og:title" content="Título de tu página" />
+        <meta property="og:description" content="Descripción de tu página" />
+        <meta
+            property="og:image"
+            content="URL de la imagen que quieres mostrar en las redes sociales"
+        />
+        <meta property="og:url" content="URL de tu página" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Título de tu página" />
+        <meta name="twitter:description" content="Descripción de tu página" />
+        <meta
+            name="twitter:image"
+            content="URL de la imagen que quieres mostrar en Twitter"
+        />
+
+        <!-- Código de las plataformas de Análisis -->
+        <script></script>
+
+        <!-- Estilos CSS -->
+        <link rel="stylesheet" href="css/normalize.min.css" />
+        <link rel="stylesheet" href="css/estilos.css" />
+
+        <!-- Scripts a cargar antes de la renderización -->
+        <script src="preloader.js"></script>
+    </head>
+    <body>
+
+        <!-- CONTENEDOR paralelo al Body -->
+        <div class="contenedor-grid">
+            <!-- HEADER, zona superior que se repite en todos los HTML -->
+            <header></header>
+
+            <!-- MAIN, zona central diferente en todos los HTML, es el contenido diferenciador de las páginas -->
+            <main class="main__slogan"> 
+                
+
+               
+                    <h1 class="h1__class">TITULO</h1>
+
+                    <p class="p__class">Esta es la mejor comida</p>
+                
             
-    
-        </header>
-    
-        <main class="main">
-    
-    
-        </main>
-    
-        <footer class="footer">
-    
-    
-        </footer>
+                <picture class="main__imagen01">
+                    <!-- smartphone -->
+                    <source
+                    srcset="
+                    img/smartphone/IMG-comida01.webp    1x,
+                    img/smartphone/IMG-comida01@2x.webp 2x,
+                    img/smartphone/IMG-comida01@3x.webp 3x
+                    "
+                    media="(min-width:320px) and (orientation:portrait)"
+                    />
+                    
+                    <!-- desktop -->
+                    <source
+                        srcset="
+                            img/desktop/IMG-comida01.webp    1x,
+                            img/desktop/IMG-comida01@2x.webp 2x
+                        "
+                        media="(min-width:1000px)"
+                    />
+                    <img src="" alt="" />
+                </picture>
 
-    </div>
-    
+                <picture class="main__imagen02">
+                    <!-- smartphone -->
+                    <source
+                    srcset="
+                    
+                    img/smartphone/IMG-comida02.webp    1x,
+                    img/smartphone/IMG-comida02@2x.webp 2x,
+                    img/smartphone/IMG-comida02@3x.webp 3x
+                    "
+                    media="(min-width:320px) and (orientation:portrait)"
+                    />
+                    
+                    <!-- desktop -->
+                    <source
+                        srcset="
+                            img/desktop/IMG-comida02.webp    1x,
+                            img/desktop/IMG-comida02@2x.webp 2x
+                        "
+                        media="(min-width:1000px)"
+                    />
+                    <img src="" alt="" />
+                </picture>
 
-  </body>
+                <picture class="main__imagen03">
+                    <!-- smartphone -->
+                    <source
+                    srcset="
+                    
+                    img/smartphone/IMG-comida03.webp    1x,
+                    img/smartphone/IMG-comida03@2x.webp 2x,
+                    img/smartphone/IMG-comida03@3x.webp 3x
+                    "
+                    media="(min-width:320px) and (orientation:portrait)"
+                    />
+                    
+                    <!-- desktop -->
+                    <source
+                        srcset="
+                            img/desktop/IMG-comida03.webp    1x,
+                            img/desktop/IMG-comida03@2x.webp 2x
+                        "
+                        media="(min-width:1000px)"
+                    />
+                    <img src="" alt="" />
+
+                </picture>
+
+                <h2 class="main__food">FOOD</h2>
+
+                <h2 class="main__comida">COMIDA</h2>
+
+
+
+                <picture class="main__imagen04">
+                    <!-- smartphone -->
+                    <source
+                    srcset="
+                    
+                    img/smartphone/IMG-comida04.webp    1x,
+                    img/smartphone/IMG-comida04@2x.webp 2x,
+                    img/smartphone/IMG-comida04@3x.webp 3x
+                    "
+                    media="(min-width:320px) and (orientation:portrait)"
+                    />
+                    
+                    <!-- desktop -->
+                    <source
+                        srcset="
+                            img/desktop/IMG-comida04.webp    1x,
+                            img/desktop/IMG-comida04@2x.webp 2x
+                        "
+                        media="(min-width:1000px)"
+                    />
+                    <img src="" alt="" />
+                </picture>
+            
+                <img class="flechita" src="IMG\SVG\flechita.svg" alt="">
+            </main>
+
+            <!-- FOOTER, zona inferior que se repite en todos los HTML -->
+            <footer></footer>
+        </div>
+
+    </body>
 </html>
