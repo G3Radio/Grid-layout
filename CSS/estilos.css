@@ -1,32 +1,109 @@
-/*RESET*/
+/* RESET */
 *{
-    /*PARA QUE NO SUME EL PADING AL WIDTH*/
-
+    /* para no dejar que el padding sume al width */
     box-sizing: border-box;
+}
+
+html{
+    font-family: sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6,p{
+
+    margin: 0;
 
 }
 
-
-/*VARIABLES*/
-
+/* VARIABLES */
 :root{
-    --paddingGrid-S: 20px;
-    --paddingGrid-D: 40px;
-
+    --margenGrid-S: 20px;
+    --margenGrid-D: 40px;
 }
 
-/*CONTENEDOR*/
-
-.contendor{
-    padding: 0 var(--paddingGrid-S);
+/* CONTENEDOR */
+.contenedor-grid, main{
     display: grid;
     grid-template-columns: repeat(6,1fr);
-    column-gap: var(--paddingGrid-S);
-
-    @media only screen and (min: width 1000px);{
-        padding: 0 var(--paddingGrid-D);
+    grid-template-rows: [header]60px [main]1fr [footer]1fr;
+    column-gap: var(--margenGrid-S);
+    @media only screen and (min-width: 1000px){
+        padding: 0 var(--margenGrid-D);
         grid-template-columns: repeat(12,1fr);
-        column-gap: var(--paddingGrid-D);
+        column-gap: var(--margenGrid-D);
+    }
+}
+
+/* HEADER */
+/* ancho total */
+header, main, footer{
+    grid-column: 1/-1;
+}
+header{
+    background-color: greenyellow;
+}
+
+/* MAIN */
+main{
+    grid-template-rows: none;
+    background-color: #ffffff;
+    margin: 0 var(--margenGrid-S);
+    row-gap: 20px;
+
+    & .main__slogan{
+        grid-column: 1/-1;
+        max-width: 1024px;
+        justify-self: center;
+    }
+    & img{
+        width: 100%;
+        border-radius: 8px;
+    }
+    & .main__imagen01{
+    
+        grid-column: 1/4;
+    }
+    
+    & .main__imagen02{
+    
+        grid-column: 4/7;
+    }
+
+    & .main__imagen03{
+    
+        grid-column: 1/6;
+    }
+
+    & .main__imagen04{
+    
+        grid-column: 2/7;
+    }
+
+    & .main__food, & .main__comida{
+
+        grid-column: span 1;
+        justify-self: center;
+        align-self: center;
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+        margin: 0;
+        font-size: 1.3rem;
+        font-weight: bolder;
         
     }
+
+    & .flechita{
+        grid-column: 2/4;
+        width: 48px;
+    }
+
+    
+}
+
+
+
+
+/* FOOTER */
+/* ancho total */
+footer{
+    background-color: black;
 }
