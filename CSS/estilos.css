@@ -1,109 +1,113 @@
 /* RESET */
-*{
+* {
     /* para no dejar que el padding sume al width */
     box-sizing: border-box;
 }
 
-html{
+html {
     font-family: sans-serif;
 }
 
-h1,h2,h3,h4,h5,h6,p{
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
     margin: 0;
-
 }
 
 /* VARIABLES */
-:root{
+:root {
     --margenGrid-S: 20px;
     --margenGrid-D: 40px;
 }
 
 /* CONTENEDOR */
-.contenedor-grid, main{
+.contenedor-grid,
+main {
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+    grid-template-columns: repeat(6, 1fr);
     grid-template-rows: [header]60px [main]1fr [footer]1fr;
     column-gap: var(--margenGrid-S);
-    @media only screen and (min-width: 1000px){
+    row-gap: var(--margenGrid-S);
+    @media only screen and (min-width: 1000px) {
         padding: 0 var(--margenGrid-D);
-        grid-template-columns: repeat(12,1fr);
+        grid-template-columns: repeat(12, 1fr);
         column-gap: var(--margenGrid-D);
     }
 }
 
 /* HEADER */
 /* ancho total */
-header, main, footer{
+header,
+main,
+footer {
     grid-column: 1/-1;
 }
-header{
+header {
     background-color: greenyellow;
 }
 
 /* MAIN */
-main{
+main {
     grid-template-rows: none;
     background-color: #ffffff;
     margin: 0 var(--margenGrid-S);
     row-gap: 20px;
 
-    & .main__slogan{
+    & .h1__class {
         grid-column: 1/-1;
-        max-width: 1024px;
-        justify-self: center;
+        text-align: center;
     }
-    & img{
+
+    & .p__class {
+        grid-column: 1/-1;
+        justify-self: center;
+        text-align: center;
+    }
+    & img {
         width: 100%;
         border-radius: 8px;
     }
-    & .main__imagen01{
-    
+    & .main__imagen01 {
         grid-column: 1/4;
     }
-    
-    & .main__imagen02{
-    
+
+    & .main__imagen02 {
         grid-column: 4/7;
     }
 
-    & .main__imagen03{
-    
+    & .main__imagen03 {
         grid-column: 1/6;
     }
 
-    & .main__imagen04{
-    
+    & .main__imagen04 {
         grid-column: 2/7;
     }
 
-    & .main__food, & .main__comida{
-
+    & .main__food,
+    & .main__comida {
         grid-column: span 1;
         justify-self: center;
         align-self: center;
         writing-mode: vertical-rl;
         text-orientation: upright;
         margin: 0;
-        font-size: 1.3rem;
+        font-size: 1.4rem;
         font-weight: bolder;
-        
     }
 
-    & .flechita{
-        grid-column: 2/4;
+    & .flechita {
         width: 48px;
+        grid-column: 3/5;
+        justify-self: center;
     }
-
-    
 }
-
-
-
 
 /* FOOTER */
 /* ancho total */
-footer{
+footer {
     background-color: black;
 }
